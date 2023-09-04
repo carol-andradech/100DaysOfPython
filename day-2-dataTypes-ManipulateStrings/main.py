@@ -37,6 +37,7 @@ It will take your current age as the input and output a message with our time le
 You have x days, y weeks, and z months left.
 '''
 
+'''
 age = input("How old are you?\n")
 
 year = 90 - int(age)
@@ -45,3 +46,19 @@ weeks = round(year * 52)
 days = round(year * 365)
 
 print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+'''
+
+print("Welcome to the tip calculator")
+bill = float(input("What was the total bill? $"))
+percentage = int(
+    input("What percentage tip would you ike to give? 10, 12, or 15? "))
+split = int(input("How many pepople to split the bill? "))
+
+porcentage_tip = percentage/100
+total_tip = bill * porcentage_tip
+total = bill+total_tip
+divided_total = total/split
+divided_totalr = round(divided_total, 2)
+
+
+print(f"Each person should pay $:{divided_totalr}")
