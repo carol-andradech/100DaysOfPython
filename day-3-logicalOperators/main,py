@@ -1,0 +1,61 @@
+'''
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+
+if (height > 120):
+    print("You can ride the rollercoaster.")
+    age = int(input("What's your age? "))
+    if age < 12:
+        print("Please, pay $5.")
+    elif age <= 18:
+        print("Please, pay $7.")
+    else:
+        print("Please, pay $12.")
+else:
+    print("Sorry, you can't ride the rollercoaster.")
+'''
+
+'''
+Check if a number it's odd or even
+num = int(input("Which number do you want to check? "))
+
+if (num % 2 == 0):
+    print("It's an even number")
+else:
+    print("It's a odd number")
+'''
+
+'''
+BMI calculator 2
+
+height = input("Enter your height in m: ")
+weight = input("Enter your weight in kg: ")
+
+height_f = float(height)
+weight_f = float(weight)
+
+bmi = round(weight_f/(height_f*height_f), 2)
+print(bmi)
+
+if bmi < 18.5:
+    print("Underweight.")
+elif bmi < 25:
+    print("Normal weight.")
+elif bmi < 30:
+    print("Slightly overweight.")
+elif bmi < 35:
+    print("Obese.")
+else:
+    print("Clinically obese.")
+'''
+year = int(input("Which year do you want to check? "))
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("Not leap year.")
