@@ -48,6 +48,7 @@ elif bmi < 35:
 else:
     print("Clinically obese.")
 '''
+'''
 year = int(input("Which year do you want to check? "))
 if year % 4 == 0:
     if year % 100 == 0:
@@ -59,3 +60,33 @@ if year % 4 == 0:
         print("Leap year.")
 else:
     print("Not leap year.")
+'''
+
+print("Welcome to the Love Calculator! <3")
+name1 = input("What is your name?\n")
+name2 = input("What is their name?\n")
+
+both = name1 + name2
+both_l = both.lower()
+print(both_l)
+
+t_count = both_l.count('t')
+r_count = both_l.count('r')
+u_count = both_l.count('u')
+e_count = both_l.count('e')
+l_count = both_l.count('l')
+o_count = both_l.count('o')
+v_count = both_l.count('v')
+e_count = both_l.count('e')
+
+first_digit = t_count + r_count + u_count + e_count
+second_digit = l_count + o_count + v_count + e_count
+
+score = int(str(first_digit) + str(second_digit))
+
+if (score < 10) or (score > 90):
+    print(f"Your score is {score}, you go together like coke and mentos")
+elif (score >= 40) and (score <= 50):
+    print(f"Your score is {score}, you are alright together.")
+else:
+    print(f"Your score is {score}.")
