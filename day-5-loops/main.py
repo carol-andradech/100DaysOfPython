@@ -62,6 +62,7 @@ password = ""
 
 # easy
 for number in range(1, nr_letters+1):
+    # password += random.choice(letters)
     seed = random.randint(0, len(letters)-1)
     password += letters[seed]
 
