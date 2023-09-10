@@ -36,7 +36,43 @@ while at_goal() == False:
     elif wall_on_right == False:
         turn_left()
        
+"""
 
+"""
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Center%201&url=worlds%2Ftutorial_en%2Fcenter1.json
 
+count = 0
+while front_is_clear():
+    move()
+    count+=1
+
+walk_final = round(count/2)
+turn_left()
+turn_left()
+
+for number in range(1, walk_final+1):
+    move()
+    if number == walk_final:
+        put()
+
+Other way:
+
+while front_is_clear():
+        move()
+        if object_here():
+            turn_left()
+            turn_left()
+            take()
+            move()
+            if object_here():
+                done()
+            else:
+                put()
+                
+        if wall_in_front():
+            turn_left()
+            turn_left()
+            put()
+            move()
 
 """
