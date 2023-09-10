@@ -1,3 +1,4 @@
+from hangman_words import word_list
 import random
 stages = ['''
   +---+
@@ -64,8 +65,7 @@ logo = '''
 |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                     __/ |                      
                    |___/    '''
-word_list = ["apple", "banana", "orange", "pineapple",
-             "strawberry", "grape", "pear", "watermelon", "mango", "kiwi"]
+
 
 word = random.choice(word_list)
 display = []
@@ -92,11 +92,12 @@ while not game_over:
         print(f"{stages[life]}")
         life -= 1
 
-    print(f"{display}")
+    print(f"{' '.join(display)}")
 
     if life == -1:
         game_over = True
         print(f"Game Over")
+        print(f"The word was: {word}")
 
     if "_" not in display:
         game_over = True
