@@ -53,6 +53,9 @@ while not end:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
+    while shift > 26:
+        print("Type a number between 1 and 26")
+        shift = int(input("Type the shift number:\n"))
     encrypt_decode(text, shift, direction)
     if (end == False):
         end_update = input(
