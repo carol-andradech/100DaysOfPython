@@ -23,13 +23,13 @@ def calculateScore(cards):
 
 
 def printCards(cards, sum):
-    print(f"Cards:[", end=" ")
+    print(f"Cartas:[", end=" ")
     for i, card in enumerate(cards):
         if i == len(cards) - 1:
             print(f"{card}", end=" ")
         else:
             print(f"{card},", end=" ")
-    print(f"]. Current score: {sum}")
+    print(f"]. Pontuação: {sum}")
 
 
 def verifyWin(sumPc, sumPlayer):
@@ -65,22 +65,22 @@ sumPc = calculateScore(pcCards)
 
 
 while not end:
-    print(f"Your", end=" ")
+    print(f"Suas", end=" ")
     printCards(playerCards, sumPlayer)
-    print(f"PC card: [{pcCards[0]}]")
+    print(f"Carta do PC : [{pcCards[0]}]")
 
     if sumPlayer == 0 or sumPc == 0 or sumPlayer > 21:
         end = True
     else:
-        hit = input("Type 'y' to get another card, type 'n' to pass: ")
-        if hit == "y":
+        hit = input("Digite 's' para continuar e 'n' para sair. ")
+        if hit == "s":
             playerCards.append(cards[randomFunction()])
             sumPlayer = calculateScore(playerCards)
         else:
             end = True
 
 while sumPc != 0 and sumPc < 17:
-    print(f"Your", end=" ")
+    print(f"Suas", end=" ")
     printCards(playerCards, sumPlayer)
     pcCards.append(cards[randomFunction()])
     sumPc = calculateScore(pcCards)
@@ -89,6 +89,6 @@ while sumPc != 0 and sumPc < 17:
 
 
 print("-------------------------------------------------")
-print(f"Your final hand: {playerCards}, final score: {sumPlayer}")
-print(f"Computer's final hand: {pcCards}, final score: {sumPc}")
+print(f"Sua mão final: {playerCards}, pontuação final: {sumPlayer}")
+print(f"Mão final do PC: {pcCards}, pontuação final: {sumPc}")
 print(verifyWin(sumPc, sumPlayer))
