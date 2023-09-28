@@ -11,12 +11,10 @@ def randomAccount():
 
 
 def compareFollowers(optionA, optionB, answer):
-    if answer == "a" and optionA['follower_count'] > optionB['follower_count']:
-        return True
-    elif answer == "b" and optionB['follower_count'] > optionA['follower_count']:
-        return True
+    if optionA['follower_count'] > optionB['follower_count']:
+        return answer == "a"
     else:
-        return False
+        return answer == "b"
 
 
 print(logo)
@@ -32,8 +30,6 @@ while not end:
     print(vs)
     print(
         f"Agaisnt B: {optionB['name']}, a {optionB['description']}, from {optionB['country']}")
-    print(optionA['follower_count'])
-    print(optionB['follower_count'])
     answer = input("Who has more followers? Type 'A' or 'B': ").lower()
 
     compare = compareFollowers(optionA, optionB, answer)
