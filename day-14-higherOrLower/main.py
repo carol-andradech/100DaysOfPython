@@ -19,12 +19,12 @@ def compareFollowers(optionA, optionB, answer):
         return False
 
 
+print(logo)
 optionA = randomAccount()
 while not end:
 
     optionB = randomAccount()
 
-    print(logo)
     print(
         f"Compare A: {optionA['name']}, a {optionA['description']}, from {optionA['country']}")
     print(vs)
@@ -38,6 +38,7 @@ while not end:
         print(f"Sorry, that's wrong. Final Score: {score}")
         end = True
     else:
+        print("\x1b[2J\x1b[H")
         optionA = compare
         score += 1
         print(f"You're right! Current score: {score}")
