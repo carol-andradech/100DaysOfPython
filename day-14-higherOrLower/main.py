@@ -23,7 +23,6 @@ optionB = optionA
 while not end:
     while optionB == optionA:
         optionB = randomAccount()
-        print(optionB)
 
     print(
         f"Compare A: {optionA['name']}, a {optionA['description']}, from {optionA['country']}")
