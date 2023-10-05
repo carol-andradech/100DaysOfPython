@@ -44,5 +44,4 @@ for dot_count in range(1 ,i*j):
 
 
 
-
 screen.exitonclick()
