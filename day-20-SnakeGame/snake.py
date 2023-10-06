@@ -27,7 +27,6 @@ class Snake:
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
-
     def move(self):
         # start , stop , step
         for seg_num in range(len(self.segments) - 1, 0, -1):
