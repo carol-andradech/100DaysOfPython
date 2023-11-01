@@ -3,7 +3,28 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\day-25-csvDataAndPandaLibrary\2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\day-25-csvDataAndPandaLibrary\day-25-us-states-game\missing_states.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\puzzle-numbers\game_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\puzzle\game_results.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
